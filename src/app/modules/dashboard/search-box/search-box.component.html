@@ -1,0 +1,4 @@
+<div class="mb-3"><app-google-name></app-google-name></div>
+<input type="text" class="w-100" placeholder="Search Column name" pInputText [(ngModel)]="searchValue">
+<small *ngIf="showError" id="searchValue-help"  class="p-error">Enter valid Column name.</small>
+<button pButton type="button" class="float-right mt-3" label="Search" (click)="searchData()"></button>

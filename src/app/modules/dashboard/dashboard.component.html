@@ -1,0 +1,22 @@
+<div class="grid">
+	<div class="col-12">
+		<button type="button" (click)="search()" class="float-right" pButton icon="pi pi-search" label="CanH Google"></button>
+	</div>
+</div>
+<div *ngIf="filteredPolicies">
+	<p-panel [header]="'Column Name ('+ filteredPolicies?.key+')'" class="p-panel-info">
+		<p-table [value]="columns">
+			<ng-template pTemplate="body" let-column>
+				<tr>
+					<td class="text-bold">{{column?.header}}</td>
+					<td>{{filteredPolicies[column?.field]}}</td>
+				</tr>
+			</ng-template>
+		</p-table>
+	</p-panel>
+</div>
+<div *ngIf="!filteredPolicies">
+	<p-card>
+		Please search using "<app-google-name></app-google-name>" button to proceed
+	</p-card>
+</div>
