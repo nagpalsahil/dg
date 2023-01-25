@@ -3755,7 +3755,7 @@ p-treeselect.ng-invalid.ng-dirty > .p-treeselect {
   border: 1px solid #dee2e6;
   padding: 1.25rem;
   background: #f8f9fa;
-  color: #343a40;
+  color: #fff;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
 }
